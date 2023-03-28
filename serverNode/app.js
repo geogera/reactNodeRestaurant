@@ -22,7 +22,7 @@ app.use(express.static(path.resolve(__dirname, '../clientReact/build')));
 
 //connect to db
 async function main() {
-  mongoose.connect("mongodb+srv://admin-george:test123@cluster0.7ymppkt.mongodb.net/restaurantDB", { useNewUrlParser: true },);
+  mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true },);
 
 }
 
