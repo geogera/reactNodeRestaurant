@@ -1,0 +1,12 @@
+{
+  "name": "projectreact-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node serverNode/app.js",
+    "build": "cd clientReact && npm install && npm run build"
+  },
+  "author": "George",
+  "license": "ISC"
+}
