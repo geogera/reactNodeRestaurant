@@ -6,7 +6,7 @@ const Port = process.env.PORT || 3000;
 const bodyParser = require("body-parser")
 const app = express();
 const https = require("https")
-
+require('dotenv').config();
 const path = require('path');
 
 app.set("view engine", 'ejs')
@@ -131,10 +131,7 @@ app.post("/apiDelete", async (req, res) => {
 })
 
 
-// All other GET requests not handled before will return our React app
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
-});
+
 
 
 

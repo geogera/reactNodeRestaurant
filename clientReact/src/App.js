@@ -119,7 +119,7 @@ function App() {
                   return <div class=" accordion-body row" key={index} >
                     <p class=" col-4" >{foodItem.name}</p>
                     {/* mul by rate of currency */}
-                    <p class="col-4 text-right" >{foodItem.price * rates?.rates[currency]}</p>
+                    <p class="col-4 text-right" >{(foodItem.price * rates.rates?.currency).toFixed(2)}</p>
                     <button class="col-4" name={foodItem.name} value={foodItem.price} onClick={addItem} >Add Item</button>
                   </div>
                 })}
@@ -140,7 +140,7 @@ function App() {
                 {basket?.map((item, index) => {
                   return <div class="row" key={index}>
                     <p class="col-a">{item.name}</p>
-                    <p class="col-a">{item.price * rates?.rates[currency]}</p>
+                    <p class="col-a">{(item.price * rates.rates?.currency).toFixed(2)}</p>
                     <button class="col-a" name="checkbox" value={index} onClick={deleteItem} >delete</button>
                   </div>
                 })}

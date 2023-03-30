@@ -66,7 +66,7 @@ function Order() {
               <th scope="row">{index}</th>
               <td>{foodItem.name}</td>
               {/* multiply by the rate for the exchange */}
-              <td>{foodItem.price * rates?.rates[currency]}</td>
+              <td>{(foodItem.price * rates?.rates?.currency).toFixed(2)}</td>
               <td>Amount</td>
             </tr></tbody>
           })}
